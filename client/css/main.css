@@ -1,0 +1,27 @@
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.today-list {
+	background-color: #f9f9f9;
+	border: 3px solid black;
+	overflow: auto;
+}
+
+.ideaInput {
+	background-color:#f9f9f9;
+	border: 3px solid #ddd;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-bottom:20px;
+	padding:10px 0 10px 0;
+}
+
+.history {
+	text-align: center;
+	background-color: lightgrey;
+	padding:5px;
+	margin:10px;
+}

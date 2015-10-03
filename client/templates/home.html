@@ -2,22 +2,71 @@
 
 <div class="container">
 
-<div class="row text-center">
-	<h1>Worst idea on {{formatDate today "short"}}</h1>
-</div>
-	{{> ideaList}}
+	<div class="row text-center">
+		<h1>Worst idea</h1> 
+		<h3>on</h3>
+		<h1> {{formatDate today "short"}} </h1>
+	</div>
+	
+	<div class = "row">
+		<div class="ideaInput col-xs-12">
+			{{> ideaInput}}
+		</div>
+	</div>
 
-	{{> ideaInput}}
+	<div class = "row">
+		<div class="ideaInput col-xs-12">
+			{{> ideaList type="top"}}
+		</div>
+	</div>
+
+	<div class = "row">
+		<div class = "today-list col-lg-5 col-xs-12">
+			{{> ideaList type="today"}}
+		</div>
+		<div class = "today-list col-lg-5 col-lg-offset-2 col-xs-12">
+			{{> ideaList type="yesterday"}}
+		</div>
+	</div>
+
+	<div class = "row">
+		<div class = "history col-xs-12">
+			<a href = "history"> See Full History Here ! </a>
+		</div>
+	</div>
+
 </div>
 
 
 </template>
 
 <template name="ideaList">
-	{{#each ideas}}
-		{{> idea}}
-	{{/each}}
+    {{#if compare type "all"}}       
+		{{#each ideas}}
+			{{> idea}}
+		{{/each}}
+    {{/if}}
+    {{#if compare type "top"}}      
+		<h3>Top Worst ideas</h3>
+		{{#each ideasTop}}
+			{{> idea}}
+		{{/each}}
+    {{/if}} 
+	{{#if compare type "today"}} 
+	<h3>Worst ideas {{type}}</h3>
+		{{#each ideasToday}}
+			{{> idea}}
+		{{/each}}
+    {{/if}} 
+	{{#if compare type "yesterday"}} 
+	<h3>Worst ideas {{type}}</h3>
+		{{#each ideasYesterday}}
+			{{> idea}}
+		{{/each}}      
+    {{/if}}
 </template>
+
+
 
 <template name="idea">
 	<div class="row" data-id="{{_id}}">
