@@ -11,12 +11,15 @@ In the words of Kelsey:
 - Daily History
 - Added Custom Favicon
 - Added footer
+- Added Banner
+- Data Tables
+- Team page
 
 ## Planned Updates
 - Added actual code comments
-- Data Tables + more info
 - Subscription Model / Email Feed using MailChimp
 - Pretty-ness enhancements
+- File structure clean-up
 
 ## The Team
 This was made by [Justin Rahardjo](http://justinrahardjo.info/), [Jared Page](http://jaredpage.net), [Kelsey Lee-Stay](https://twitter.com/kelseyleestay) and [Lizzie King](https://twitter.com/lizzieking121)

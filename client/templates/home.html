@@ -1,19 +1,17 @@
 <template name="home">
 
-<div class="container">
-
-	<div class="row">
-		<div class = "text-center">
-			<h1>Worst idea</h1> 
-			<h3>on</h3>
-			<h1> {{formatDate today "short"}} </h1>
-		</div>
-		<a href = "subscribe">
-			<div class = "subscribe">
-				Subscribe to worstideas.today
-			</div>
-		</a>
+<div class = "text-center header">
+	<h1>Worst idea</h1> 
+	<h3>on</h3>
+	<h2> {{formatDate today "short"}} </h2>
+</div>
+<a href = "subscribe">
+	<div class = "subscribe">
+		Subscribe to worstideas.today
 	</div>
+</a>
+
+<div class="container">
 	
 	<div class = "row">
 		<div class="ideaInput col-xs-12">
@@ -28,11 +26,15 @@
 	</div>
 
 	<div class = "row">
-		<div class = "today-list col-lg-5 col-xs-12">
-			{{> ideaList type="top"}}
+		<div class = "col-lg-6 col-xs-12">
+			<div class = "today-list col-xs-12">
+				{{> ideaList type="top"}}
+			</div>
 		</div>
-		<div class = "today-list col-lg-5 col-lg-offset-2 col-xs-12">
-			{{> ideaList type="yesterday"}}
+		<div class = "col-lg-6 col-xs-12">
+			<div class = "today-list col-xs-12">
+				{{> ideaList type="yesterday"}}
+			</div>
 		</div>
 	</div>
 
@@ -75,16 +77,60 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $('#top').DataTable();
+		} );
+	</script>
 </div>
 
 </template>
 
 
 <template name="team">
-	<div class="container">
-			<div class = "row">
-
-			</div>
+	<div class = "team">
+		<div class="container">
+				<div class = "row">
+					<div class = "col-xs-12 text-center">
+						<h1>Our Team</h1>
+					</div>
+				</div>
+				<div class = "row">
+					<div class = "col-xs-12 col-lg-6 person">
+						<div class = "photo">
+							<img src = "img/justin.jpg" />
+						</div>
+						<div class = "name">
+							Justin Rahardjo
+						</div>
+					</div>
+					<div class = "col-xs-12 col-lg-6 person">
+						<div class = "photo">
+							<img src = "img/jared_new.jpg" />
+						</div>
+						<div class = "name">
+							Jared Page
+						</div>
+					</div>
+					<div class = "col-xs-12 col-lg-6 person">
+						<div class = "photo">
+							<img src = "img/kelsey.jpg" />
+						</div>
+						<div class = "name">
+							Kelsey Lee-Stay
+						</div>
+					</div>
+					<div class = "col-xs-12 col-lg-6 person">
+						<div class = "photo">
+							<img src = "img/lizzie.jpg" />
+						</div>
+						<div class = "name">
+							Lizzie King
+						</div>
+					</div>
+				</div>
+		</div>
 	</div>	
 </template>
 
@@ -106,29 +152,40 @@
 
 
 <template name="ideaList">
-    {{#if compare type "all"}}       
-		{{#each ideas}}
-			{{> idea}}
-		{{/each}}
-    {{/if}}
-    {{#if compare type "top"}}      
-		<h3>Top Worst ideas</h3>
-		{{#each ideasTop}}
-			{{> idea}}
-		{{/each}}
-    {{/if}} 
-	{{#if compare type "today"}} 
-	<h3>Worst ideas {{type}}</h3>
-		{{#each ideasToday}}
-			{{> idea}}
-		{{/each}}
-    {{/if}} 
-	{{#if compare type "yesterday"}} 
-	<h3>Worst ideas {{type}}</h3>
-		{{#each ideasYesterday}}
-			{{> idea}}
-		{{/each}}      
-    {{/if}}
+	<div class="ideaDataTables">
+		<table id = "{{type}}" class="display">
+			<thead>
+				<tr>
+					<th>Rank</th>
+					<th>Content</th>
+					<th>Date</th>
+				</tr>
+			</thead>
+			<tbody>
+			    {{#if compare type "all"}}       
+					{{#each ideas}}
+						{{> idea}}
+					{{/each}}
+			    {{/if}}
+			    {{#if compare type "top"}}      
+					<h3>Top Worst ideas</h3>
+					{{{ideasTop}}}
+			    {{/if}} 
+				{{#if compare type "today"}} 
+				<h3>Worst ideas {{type}}</h3>
+					{{#each ideasToday}}
+						{{> idea}}
+					{{/each}}
+			    {{/if}} 
+				{{#if compare type "yesterday"}} 
+				<h3>Worst ideas {{type}}</h3>
+					{{#each ideasYesterday}}
+						{{> idea}}
+					{{/each}}      
+			    {{/if}}
+		    </tbody>
+	    </table>
+    </div>
 </template>
 
 

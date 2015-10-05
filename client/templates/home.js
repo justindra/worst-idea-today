@@ -3,8 +3,16 @@ Template.ideaList.helpers({
 		return Ideas.find({}, {sort: [["rank", "desc"]]});
 	},
 	ideasTop: function () {
-		return Ideas.find({}, {sort: [["rank", "desc"]], limit:10});
-
+		var topIdeas = Ideas.find({}, {sort: [["rank", "desc"]], limit:10}).fetch()
+		var text = "";
+		for (i = 0; i < topIdeas.length; i++) { 
+			text += "<tr>";
+		    text += "<td>" + topIdeas[i].rank + "</td>";
+		    text += "<td>" + topIdeas[i].content + "</td>";
+		    text += "<td>" + topIdeas[i].date + "</td>";
+			text += "</tr>";
+		}
+		return text;
 	},
 	ideasToday: function () {
 		if (Ideas.find({date: {$gte: today(), $lte: tomorrow()}}, {sort: [["rank", "desc"]]}).length() == 0){
@@ -66,3 +74,5 @@ Template.home.helpers({
 		return Date.now();
 	}
 });
+
+

@@ -1,3 +1,25 @@
+@font-face {
+    font-family: LeagueGothic;
+    src: url(fonts/LeagueGothic-Regular.otf);
+}
+
+.header {
+	background-color: #62C3B5;
+	font-family: LeagueGothic;
+}
+
+.header h1 {
+	font-size:100pt;
+}
+
+.header h2 {
+	font-size:50pt;
+}
+
+.header h3 {
+	font-size:40pt;
+}
+
 .vertical-center {
   position: relative;
   top: 50%;
@@ -11,6 +33,13 @@
 	overflow: auto;
 }
 
+.row .today-list:first-child {
+	padding-right:20px;
+}
+.row .today-list:last-child {
+	padding-left:20px;
+}
+
 .ideaInput {
 	border-radius: 10px;
 	background-color:#f9f9f9;
@@ -21,6 +50,10 @@
 	padding:10px 0 10px 0;
 }
 
+.ideaDataTables{
+	padding:20px 0 20px 0;
+}
+
 .subscribe {
 	overflow: auto;
 	position:absolute;
@@ -29,7 +62,7 @@
 	padding:10px;
 	background-color:#5cb85c;
 	color:white;
-	border:3px solid white;
+	border:3px solid #62C3B5;
 }
 
 .subscribe:hover {
@@ -45,12 +78,12 @@
 	border-radius:10px;
 	font-size:24pt;
 	cursor:pointer;
-	color:#777;
+	color:#62C3B5;
 }
 
 .history:hover {
 	background-color: darkgrey;	
-	color:white;
+	color:#36B1C3;
 }
 
 .footer {
@@ -75,3 +108,30 @@
 	color:#777;
 	background-color:#1c1c1c;
 }
+
+.photo, .name{
+	text-align: center;
+}
+.team {
+	background-color: #9BB2AA;
+	width:100vw;
+	height:100vh;
+}
+.name {
+	padding:20px 20px 20px 20px;
+	background-color: #FF7F62;
+	color:white; 
+	width:300px;
+	margin:0 auto;
+}
+
+.photo img {
+	width:300px;
+	height:300px;
+}
+
+.person {
+	margin-bottom:50px;
+}
+
+
