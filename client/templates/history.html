@@ -5,9 +5,15 @@
 	</div>
 
 	<div class = "row">
-		<div class="ideaInput col-xs-12">
+		<div class="col-xs-12">
 			{{> ideaList type="all"}}
 		</div>
 	</div>
 
+
+<script type = "text/javascript">
+		$(document).ready(function() {
+		    $('#all').DataTable();
+		} );
+</script>
 </template>

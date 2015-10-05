@@ -9,6 +9,12 @@
 	overflow:auto;
 }
 
+.details {
+	font-size:15pt;
+	padding-left:30px;
+	padding-top:15px;
+}
+
 .header h1 {
 	font-size:100pt;
 }
@@ -59,6 +65,17 @@
 	overflow-y: auto;
 	margin-bottom:20px;
 	padding:10px 0 10px 0;
+}
+
+.ideaInputRow input{
+	height:60px;
+	font-size:15pt;
+}
+
+.ideaInputRow .btn {
+	height:60px;
+	font-size:20pt;
+	padding: 0 40px 0 40px;
 }
 
 .ideaDataTables{
