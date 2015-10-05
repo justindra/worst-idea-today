@@ -7,20 +7,21 @@ In the words of Kelsey:
 
 ## Latest Updates
 - Meteor version 1.0.2.1 -> 1.1.0.3 update
-- Added actual code comments
 - Added test database
 - Daily History
 - Added Custom Favicon
+- Added footer
 
 ## Planned Updates
+- Added actual code comments
 - Data Tables + more info
-- Add footer
-- Subscription Model
-- Email Feed
+- Subscription Model / Email Feed using MailChimp
 - Pretty-ness enhancements
 
 ## The Team
-This was made by [Justin Rahardjo](http://justinrahardjo.info/), [Jared Page](http://jaredpage.net), [Kelsey Lee Stay](https://twitter.com/kelseyleestay) and [Lizzie Mgguie](https://twitter.com/lizzieking121)
-![alt tag](https://raw.github.com/JaredPage/worst-idea-today/worstidea.jpg)
+This was made by [Justin Rahardjo](http://justinrahardjo.info/), [Jared Page](http://jaredpage.net), [Kelsey Lee-Stay](https://twitter.com/kelseyleestay) and [Lizzie King](https://twitter.com/lizzieking121)
+
+![alt tag](https://raw.githubusercontent.com/JaredPage/worst-idea-today/master/worstidea.jpg)
 
 ## Acknowledgements
+We would like to thank Startup House for providing the atmosphere and free food. 

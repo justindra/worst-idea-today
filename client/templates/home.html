@@ -2,10 +2,17 @@
 
 <div class="container">
 
-	<div class="row text-center">
-		<h1>Worst idea</h1> 
-		<h3>on</h3>
-		<h1> {{formatDate today "short"}} </h1>
+	<div class="row">
+		<div class = "text-center">
+			<h1>Worst idea</h1> 
+			<h3>on</h3>
+			<h1> {{formatDate today "short"}} </h1>
+		</div>
+		<a href = "subscribe">
+			<div class = "subscribe">
+				Subscribe to worstideas.today
+			</div>
+		</a>
 	</div>
 	
 	<div class = "row">
@@ -16,13 +23,13 @@
 
 	<div class = "row">
 		<div class="ideaInput col-xs-12">
-			{{> ideaList type="top"}}
+			{{> ideaList type="today"}}
 		</div>
 	</div>
 
 	<div class = "row">
 		<div class = "today-list col-lg-5 col-xs-12">
-			{{> ideaList type="today"}}
+			{{> ideaList type="top"}}
 		</div>
 		<div class = "today-list col-lg-5 col-lg-offset-2 col-xs-12">
 			{{> ideaList type="yesterday"}}
@@ -30,15 +37,73 @@
 	</div>
 
 	<div class = "row">
-		<div class = "history col-xs-12">
-			<a href = "history"> See Full History Here ! </a>
-		</div>
+		<a href = "history">
+			<div class = "history col-xs-12">
+				 See Full History Here !
+			</div> 
+		</a>
 	</div>
 
 </div>
 
+<div class = "footer">
+	<div class="container">
+		<div class = "row footer-info">
+			<div class = "col-xs-6">
+				<h1>Contact Us</h1>
+				Brought to you by the worstidea.today team.
+				<br />
+				Email: mail@worstidea.today
+				<br />
+				Address: Brisbane, QLD 4000, Australia
+				<br />
+			</div>
+			<div class = "col-xs-6">
+				<h1>About Us</h1>
+				<ul>
+					<li> <a href = "/"> Home </a> </li>
+					<li> <a href = "about"> What is it? </a> </li>
+					<li> <a href = "team"> Team </a> </li>
+					<li> <a href = "history"> History of Worst Ideas </a> </li>
+					<li> <a href = "unsub"> Unsubscribe </a> </li>
+				</ul>
+			</div>
+		</div>
+		<div class = "row footer-copyright">
+			<div class = "col-xs-12">
+				Copyright 2015 worstidea.today
+			</div>
+		</div>
+	</div>
+</div>
 
 </template>
+
+
+<template name="team">
+	<div class="container">
+			<div class = "row">
+
+			</div>
+	</div>	
+</template>
+
+<template name="about">
+	<div class="container">
+			<div class = "row">
+
+			</div>
+	</div>	
+</template>
+
+<template name="subscribe">
+	<div class="container">
+			<div class = "row">
+
+			</div>
+	</div>	
+</template>
+
 
 <template name="ideaList">
     {{#if compare type "all"}}       

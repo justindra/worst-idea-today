@@ -7,7 +7,11 @@ Template.ideaList.helpers({
 
 	},
 	ideasToday: function () {
-		return Ideas.find({date: {$gte: today(), $lte: tomorrow()}}, {sort: [["rank", "desc"]]});
+		if (Ideas.find({date: {$gte: today(), $lte: tomorrow()}}, {sort: [["rank", "desc"]]}).length() == 0){
+			return "Nope";
+		}else{			
+			return Ideas.find({date: {$gte: today(), $lte: tomorrow()}}, {sort: [["rank", "desc"]]});
+		}
 
 	},
 	ideasYesterday: function () {
