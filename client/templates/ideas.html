@@ -1,14 +1,16 @@
 <template name="ideaList">
-	<div class="ideaDataTables">
-	    {{#if compare type "top"}}      
-			<h3>Top Worst ideas</h3>
-	    {{/if}} 
+	<div class = "col-xs-12 text-center">
 		{{#if compare type "today"}} 
-			<h3>Worst ideas {{type}}</h3>
+			<h1>Today's worst ideas</h1>
+	    {{/if}} 
+	    {{#if compare type "top"}}      
+			<h1>Top Worst ideas</h1>
 	    {{/if}} 
 		{{#if compare type "yesterday"}} 
-			<h3>Worst ideas {{type}}</h3>
+			<h1>Yesterday's worst ideas</h1>
 	    {{/if}}
+    </div>
+	<div class="ideaDataTables">
 		<table id = "{{type}}" class="display">
 			<thead>
 				<tr>
@@ -65,17 +67,14 @@
 
 <template name="ideaInput">
 <div class="row ideaInputRow">
-	<div class="col-xs-1 details text-center">
-		Details:
-	</div>
-	<div class="col-xs-2"> 
+	<div class="col-lg-2 col-xs-12"> 
 		<input type="text" class="form-control" maxlength="140" placeholder="Your Name">
 	</div>
-	<div class="col-xs-8  text-center">
+	<div class="col-lg-8 col-xs-12 text-center">
 		<input type="text" class="form-control" maxlength="140" placeholder="Your worst idea here....">
 	</div>
-	<div class="col-xs-1 text-center">
-		<button class="btn btn-success">Add</button>
+	<div class="col-lg-2 col-xs-12  text-center">
+		<button class="btn btn-success text-center">Add</button>
 	</div>
 </div>
 </template>

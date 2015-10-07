@@ -1,99 +1,111 @@
 <template name="home">
 
 
+<div class="page-wrap">
 
-<a href = "subscribe">
-	<div class = "subscribe">
-		Subscribe to worstideas.today
+	{{> subscribe}}
+
+	<div class = "text-center header">
+		<h1>Worst idea</h1> 
+		<h3>on</h3>
+		<h2> {{formatDate today "short"}} </h2>
 	</div>
-</a>
 
-<div class = "text-center header">
-	<h1>Worst idea</h1> 
-	<h3>on</h3>
-	<h2> {{formatDate today "short"}} </h2>
-</div>
-
-<div class = "body">
-	<div class="container">
-		
-		<div class = "row top">
-			<div class="ideaInput col-xs-12">
-				{{> ideaInput}}
-			</div>
-		</div>
-
-		<div class = "row">
-			<div class="ideaInput col-xs-12">
-				{{> ideaList type="today"}}
-			</div>
-		</div>
-
-		<div class = "row">
-			<div class = "col-lg-6 col-xs-12">
-				<div class = "today-list col-xs-12">
-					{{> ideaList type="top"}}
+	<div class = "body">
+		<div class="container">
+			
+			<div class = "row top">
+				<div class="col-xs-12">
+					<div class="ideaInput col-xs-12">
+						{{> ideaInput}}
+					</div>
 				</div>
 			</div>
-			<div class = "col-lg-6 col-xs-12">
-				<div class = "today-list col-xs-12">
-					{{> ideaList type="yesterday"}}
+
+			<div class = "row">
+				<div class="col-xs-12">
+					<div class="ideaInput today-list col-xs-12">
+						{{> ideaList type="today"}}
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class = "row">
-			<a href = "history">
-				<div class = "history col-xs-12">
-					 See full history
-				</div> 
-			</a>
-		</div>
-
-	</div>
-</div>
-
-<div class = "footer">
-	<div class="container">
-		<div class = "row footer-info">
-			<div class = "col-xs-6">
-				<h1>Contact Us</h1>
-				Brought to you by the worstidea.today team.
-				<br />
-				Email: mail@worstidea.today
-				<br />
-				Address: Brisbane, QLD 4000, Australia
-				<br />
-				<br />
-				Copyright 2015 worstidea.today
+			<div class = "row">
+				<div class = "col-lg-6 col-xs-12">
+					<div class = "ideaInput today-list col-xs-12">
+						{{> ideaList type="top"}}
+					</div>
+				</div>
+				<div class = "col-lg-6 col-xs-12">
+					<div class = "ideaInput today-list col-xs-12">
+						{{> ideaList type="yesterday"}}
+					</div>
+				</div>
 			</div>
-			<div class = "col-xs-6">
-				<h1>About Us</h1>
-				<ul>
-					<li> <a href = "/"> Home </a> </li>
-					<li> <a href = "about"> What is it? </a> </li>
-					<li> <a href = "team"> Team </a> </li>
-					<li> <a href = "history"> History of Worst Ideas </a> </li>
-					<li> <a href = "unsub"> Unsubscribe </a> </li>
-				</ul>
+
+			<div class = "row">
+				<div class = "col-xs-12">
+					<a href = "history">
+						<div class = "history col-xs-12">
+							 See full history
+						</div> 
+					</a>
+				</div>
 			</div>
+
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-		    $('#today').DataTable();
-		    $('#yesterday').DataTable();
-		    $('#top').DataTable();
-		    $('#all').DataTable();
-		} );
-	</script>
+{{>footer}}
 </div>
+
 
 </template>
 
+<template name = "subscribe">
+	<a href = "subscribe">
+		<div class = "subscribe">
+			Subscribe to worstideas.today
+		</div>
+	</a>
+</template>
+
+<template name="footer">
+	<footer class = "site-footer">
+		<div class="container">
+			<div class = "row footer-info">
+				<div class = "col-xs-12 col-lg-6">
+					<h1>Contact Us</h1>
+					Brought to you by the worstidea.today team.
+					<br />
+					Email: mail@worstidea.today
+					<br />
+					Address: Brisbane, QLD 4000, Australia
+					<br />
+					<br />
+					Copyright 2015 worstidea.today
+				</div>
+				<div class = "col-xs-12 col-lg-6">
+					<h1>About Us</h1>
+					<ul>
+						<li> <a href = "/"> Home </a> </li>
+						<li> <a href = "about"> What is it? </a> </li>
+						<li> <a href = "team"> Team </a> </li>
+						<li> <a href = "history"> History of Worst Ideas </a> </li>
+						<li> <a href = "unsub"> Unsubscribe </a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+			    $('#today').DataTable();
+			    $('#yesterday').DataTable();
+			    $('#top').DataTable();
+			} );
+		</script>
+	</footer>
 
 
-
-
+</template>
 
