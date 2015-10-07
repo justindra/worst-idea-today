@@ -216,3 +216,18 @@ html, body {
 		display:none;
 	}
 }
+
+
+.spacer input{
+	margin: 10px 0 10px 0;
+	height:60px;
+	font-size:15pt;
+}
+
+
+.spacer .btn {
+	height:60px;
+	font-size:20pt;
+	width:100%;
+	margin: 10px 0 10px 0;
+}

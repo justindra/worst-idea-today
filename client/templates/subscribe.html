@@ -7,9 +7,54 @@
 </template>
 
 <template name="subscribe">
-	<div class="container">
-			<div class = "row">
-				<h1> Subscribe Unavailable ! Coming soon ! </h1>
+
+<div class="page-wrap">
+	<div class = "text-center header">
+		<span class = "bigger" style = "color:#C33D34;">Subscribe</span> <h1>to terrible ideas</h1> 
+	</div>
+  	<div class = "body">
+		<div class="container">
+			<div class="row" style="padding-top:30px">
+				<div class="col-lg-2 col-xs-12 spacer"> 
+					<input type="text" class="form-control" maxlength="140" placeholder="Your Name">
+				</div>
+				<div class="col-lg-8 col-xs-12 text-cente spacer">
+					<input type="text" class="form-control" maxlength="140" placeholder="Your Email">
+				</div>
+				<div class="col-lg-2 col-xs-12  text-center spacer">
+					<button class="btn btn-success text-center">Subscribe</button>
+				</div>
+				<div class="col-xs-12  text-center spacer">
+					<img src = "img/poo.png" style="width:100%; max-width:400px">
+				</div>
 			</div>
-	</div>	
+		</div>	
+	</div>
+   {{> footer}}
+</div>
+
+<style>
+	.header .bigger{
+		font-size: 100pt;
+		font-family: LeagueGothic;
+		display:inline-block;
+		margin-right:20px;
+	} 	
+	.header h1 {
+		display:inline-block;
+	}
+@media (max-width: 768px) { 
+	.header .bigger{
+		display:block;
+		font-size: 80pt;
+		font-family: LeagueGothic;
+		margin-right:0px;
+	}
+ 	.header h1 {
+		font-size:40pt;
+	}
+}
+</style>
+
+
 </template>
