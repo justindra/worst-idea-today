@@ -5,6 +5,9 @@ This was thought of in [Startup House](http://startuphouse.com/) on our first co
 In the words of Kelsey:
 > That's a terrible idea you guys. You need a website to store all your dumb ideas. 
 
+See the project in action
+http://www.worstidea.today/
+
 ## Latest Updates
 - Meteor version 1.0.2.1 -> 1.1.0.3 update
 - Added test database
