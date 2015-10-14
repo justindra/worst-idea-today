@@ -231,3 +231,13 @@ html, body {
 	width:100%;
 	margin: 10px 0 10px 0;
 }
+
+.downvote {
+	font-size:30pt;
+	color:#C33D34;
+}
+
+
+.idea-row td{
+	text-align: center;
+}

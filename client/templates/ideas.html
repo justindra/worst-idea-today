@@ -17,6 +17,7 @@
 					<th>Rank</th>
 					<th>Content</th>
 					<th>Date</th>
+					<th>Vote</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -67,14 +68,16 @@
 
 <template name="ideaInput">
 <div class="row ideaInputRow">
+<form id = "form" action="">
 	<div class="col-lg-2 col-xs-12"> 
-		<input type="text" class="form-control" maxlength="140" placeholder="Your Name">
+		<input type="text" class="form-control" maxlength="140" placeholder="Your Name" autofocus required>
 	</div>
 	<div class="col-lg-8 col-xs-12 text-center">
-		<input type="text" class="form-control" maxlength="140" placeholder="Your worst idea here....">
+		<input type="text" class="form-control" maxlength="140" placeholder="Your worst idea here...." required>
 	</div>
 	<div class="col-lg-2 col-xs-12  text-center">
 		<button class="btn btn-success text-center">Add</button>
 	</div>
+	</form>
 </div>
 </template>
