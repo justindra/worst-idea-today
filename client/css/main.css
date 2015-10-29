@@ -190,13 +190,13 @@ html, body {
 	text-align: center;
 }
 .team {
-	background-color: #9BB2AA;
-	width:100vw;
+	background-color: lightgrey;
 	height:100vh;
+	padding-top:50px;
 }
 .name {
 	padding:20px 20px 20px 20px;
-	background-color: #FF7F62;
+	background-color: #5cb85c;
 	color:white; 
 	width:300px;
 	margin:0 auto;
@@ -230,4 +230,14 @@ html, body {
 	font-size:20pt;
 	width:100%;
 	margin: 10px 0 10px 0;
+}
+
+.downvote {
+	font-size:30pt;
+	color:#C33D34;
+}
+
+
+.idea-row td{
+	text-align: center;
 }
