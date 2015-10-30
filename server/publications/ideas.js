@@ -2,6 +2,10 @@ Meteor.publish('ideas', function () {
 	return Ideas.find({});
 });
 
+Meteor.publish('subscribers', function () {
+	return Subscribers.find({});
+});
+
 function today() {
 	var today = new Date();
 	return new Date(today.getFullYear(), today.getMonth(), today.getDate()).valueOf();

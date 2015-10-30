@@ -13,5 +13,15 @@ Meteor.methods({
 		Ideas.update({_id: id}, {$inc: {rank: adjustment}}, function(err) {
 			if(err) console.log(err);
 		});
+	}, 
+	addSubscriber: function(name, email) {
+		Subscribers.insert({
+			email: email,
+			name: name,
+			verified: false,
+			date: Date.now()
+		}, function(err) {
+			if (err) console.log(err);
+		});
 	}
 });
