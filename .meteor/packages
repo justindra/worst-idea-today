@@ -10,3 +10,4 @@ iron:router
 less
 fortawesome:fontawesome
 momentjs:moment
+email

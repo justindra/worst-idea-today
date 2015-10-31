@@ -1,3 +1,7 @@
+Template.subscribe.onRendered(function(){	
+	$('form').submit(false);
+});
+
 Template.subscribe.events({
 	'click .btn.btn-success': function (evt, template) {
 		var inputs = template.findAll('input');
