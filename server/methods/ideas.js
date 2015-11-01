@@ -15,7 +15,7 @@ Meteor.methods({
 		});
 	}, 
 	addSubscriber: function(name, email) {
-		Subscribers.insert({
+		var sub_id = Subscribers.insert({
 			email: email,
 			name: name,
 			verified: false,
@@ -26,7 +26,7 @@ Meteor.methods({
 		var to = "jaredrpage@gmail.com";
 		var from = "mail@meteor.com";
 		var subject = "herro testing";
-		var text = "Yay? <a href = 'http://worstidea.today/unsubscribe'";
+		var text = "Yay? Click here to <a href = 'http://worstidea.today/unsubscribe/"+sub_id+"'> Un-subscribe </a>";
 		//Validation check
 		//check([to, from, subject, text], [String]);
 		//Check if it isn't in the database
