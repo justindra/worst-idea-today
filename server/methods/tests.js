@@ -23,6 +23,9 @@ db.ideas.insert({ content: "Today 8", rank: 0, date: new Date(new Date().setDate
 db.ideas.insert({ content: "Today 9", rank: 0, date: new Date(new Date().setDate(new Date().getDate())).valueOf() });
 db.ideas.insert({ content: "Today 10", rank: 0, date: new Date(new Date().setDate(new Date().getDate())).valueOf() });
 
+
+db.subscribers.insert({ name: "Today 10", email: "noob@email.com", date: new Date(new Date().setDate(new Date().getDate())).valueOf() });
+
 }
 
 

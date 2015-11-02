@@ -7,19 +7,23 @@
 	  	<div class = "body">
 			<div class="container">
 				<div class="row" style="padding-top:30px">
-					<div class="col-lg-2 col-xs-12 spacer"> 
-						<input type="text" class="form-control" maxlength="140" placeholder="Your Name">
-					</div>
-					<div class="col-lg-8 col-xs-12 text-cente spacer">
-						<input type="text" class="form-control" maxlength="140" placeholder="Your Email">
-					</div>
-					<div class="col-lg-2 col-xs-12  text-center spacer">
-						<button class="btn btn-success text-center">Subscribe</button>
-					</div>
-					<div class="col-xs-12  text-center spacer">
-					    <br />
-						<img src = "img/poo.png" style="width:100%; max-width:400px">
-					</div>
+
+					<form id = "form" action="">
+						<div class="col-lg-2 col-xs-12 spacer"> 
+							<input type="text" class="form-control" maxlength="140" placeholder="Your Name" required autfocus>
+						</div>
+						<div class="col-lg-8 col-xs-12 text-cente spacer">
+							<input type="email" class="form-control" maxlength="140" placeholder="Your Email" required>
+						</div>
+						<div class="col-lg-2 col-xs-12  text-center spacer">
+							<button class="btn btn-success text-center">Subscribe</button>
+						</div>
+						<div class="col-xs-12  text-center spacer">
+						    <br />
+							<img src = "img/poo.png" style="width:100%; max-width:400px">
+							{{{getSubscribers}}}
+						</div>
+					</form>
 				</div>
 			</div>	
 		</div>
